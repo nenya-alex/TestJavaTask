@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="IndexApp">
+<head>
+    <!--<style>-->
+        <!--table, th, td {-->
+            <!--border: 1px solid black;-->
+            <!--border-collapse: collapse;-->
+        <!--}-->
+        <!--th, td {-->
+            <!--padding: 5px;-->
+            <!--text-align: left;-->
+        <!--}-->
+    <!--</style>-->
+    <meta charset="UTF-8">
+    <title>Copy Table Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script type='text/javascript' src='scripts.js'></script>
+</head>
+
+<body ng-controller="DataFromSiteController">
+<a ng-href = "/"><b>Home</b></a>
+
+<p></p>
+
+<button class="btn btn-default" ng-click="addData()">Добавить</button>
+
+<p></p>
+
+<p3>Result Copied Table</p3>
+
+<p></p>
+
+<table>
+    <thead>
+    <tr>
+        <th>Rendering engine</th>
+        <th>Browser</th>
+        <th>Platform(s)</th>
+        <th>Engine version</th>
+        <th>CSS grade</th>
+    </tr>
+    </thead>
+    <tbody >
+    <tr ng-repeat="data in sitedata">
+        <td>{{data.renderingEngine}}</td>
+        <td>{{data.browser}}</td>
+        <td>{{data.platform}}</td>
+        <td>{{data.engineVersion}}</td>
+        <td>{{data.cssGrade}}</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
